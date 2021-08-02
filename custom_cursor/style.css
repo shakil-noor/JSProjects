@@ -11,16 +11,48 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: white;
+	color: #fff;
 }
 
 .cursor{
 	position: absolute;
 	left: 0;
 	top: 0;
-	border: 1.5px solid white;
+	border: 1.5px solid #fff;
 	width: 30px;
 	height: 30px;
 	border-radius:50px;
 	transform: translate(-50%,-50%);
+	pointer-events: none;
+}
+
+.cursor::after, .cursor::before{
+	content: '';
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.cursor::before{
+	background-color: rgb(255, 255, 255);
+}
+.cursor.clicked::before{
+	animation: clicked .7s ease-in-out forwards;
+}
+
+@keyframes clicked{
+	0%{
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	100%{
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(5);
+	}
 }

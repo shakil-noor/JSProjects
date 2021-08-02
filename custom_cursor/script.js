@@ -13,3 +13,16 @@ window.addEventListener('scroll',()=>{
 	const fromTop = parseInt(cursor.getAttribute('cursor-fromTop'));
 	cursor.style.top = scrollY + fromTop + 'px';
 })
+
+window.addEventListener('click',() =>{
+	if (cursor.classList.contains('clicked')) {
+		cursor.classList.remove('clicked');
+
+		//Triggering a dom reflow
+		void cursor.offsetWidth;
+		cursor.classList.add('clicked');
+
+	}else{
+		cursor.classList.add('clicked');
+	}
+})
