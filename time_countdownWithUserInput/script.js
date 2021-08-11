@@ -17,6 +17,7 @@ form.addEventListener('submit', (e)=>{
         displayTime(totalSecond);
         if(totalSecond == 0){
             showTime.innerHTML = 'Time out';
+            play();
             clearInterval(countDown);
         }
     },1000);
@@ -28,3 +29,8 @@ form.addEventListener('submit', (e)=>{
     }
     
 });
+
+function play() {
+    var audio = new Audio('mixkit-police-whistle-614.wav');
+    audio.play();
+  }
