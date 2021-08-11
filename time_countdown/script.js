@@ -18,3 +18,5 @@ function displayTime(second){
     const sec = Math.floor(second % 60);
     timeH.innerHTML = `${min<10 ? '0':''}${min}:${sec<10 ? '0': ''}${sec}`;
 }
+
+
