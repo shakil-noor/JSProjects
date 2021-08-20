@@ -1,0 +1,48 @@
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .clock {
+	position: relative;
+	margin: auto;
+	height: 30vw;
+	width: 30vw;
+	background: url(clock.jpg) no-repeat;
+	
+	background-size: 100%;
+}
+
+.hour,
+.min,
+.sec {
+	position: absolute;
+	background: black;
+	border-radius: 10px;
+    left: 50%;
+	transform-origin: bottom;
+}
+
+.hour {
+	width: 1.8%;
+	height: 25%;
+	top: 25%;
+	opacity: 0.8;
+}
+
+.min {
+	width: 1.6%;
+	height: 30%;
+	top: 19%;
+	opacity: 0.8;
+} 
+
+.sec {
+	width: 1%;
+	height: 40%;
+	top: 9%;
+	opacity: 0.8;
+} 
